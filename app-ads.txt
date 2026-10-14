@@ -1,0 +1,4 @@
+# app-ads.txt - Lone Bull Games
+# AdMob hesabi acilinca asagidaki satirin basindaki # silinip pub-XXXXXXXXXXXXXXXX yerine
+# AdMob yayinci kimligi yazilacak.
+# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
