@@ -18,12 +18,12 @@
   };
   Karakter.prototype.yenile = function () { var k = this.kare; this.kare = -1; this.ciz(Math.max(k, 0)); };
 
-  var canavar = new Karakter("canavar", "img/anim_canavar.webp", 208, 234, 6);   // 18 kare: sağa sola bakar
+  var canavar = new Karakter("canavar", "img/anim_dev.webp", 240, 404, 8);       // 40 kare: boydan Fırtına Devi (açılıştaki)
   var tilki = new Karakter("tilki", "img/anim_tilki.webp", 224, 224, 5);         // 25 kare: tüfeği kaldır, tara, indir
   var ejder = new Karakter("ejder", "img/anim_ejder.webp", 224, 224, 8);         // 32 kare: kükrer, ateş üfler
 
-  function canavarKare(t) {          // ileri-geri, saniyede 7 kare
-    var n = 18, tur = 2 * (n - 1), f = Math.floor(t * 7) % tur;
+  function canavarKare(t) {          // ileri-geri, saniyede 11 kare
+    var n = 40, tur = 2 * (n - 1), f = Math.floor(t * 11) % tur;
     return f < n ? f : tur - f;
   }
   function tilkiKare(t) {

@@ -160,8 +160,9 @@ html:not([lang="en"]) [data-dil="en"], html:not([lang="tr"]) [data-dil="tr"] { d
 .sahne .kahraman { position: relative; z-index: 1; }
 .yaratik { position: absolute; pointer-events: none; background-repeat: no-repeat; z-index: 2;
   filter: drop-shadow(0 12px 16px rgba(0, 0, 0, 0.55)); transition: filter .25s; }
-.canavar { width: 240px; height: 270px; right: 0; top: 34px; filter: none; }
-.canavar::before { content: ""; position: absolute; inset: 6% 8% 10% 8%; z-index: -1; border-radius: 50%;
+.canavar { width: 270px; height: 455px; right: 0; top: 18px; filter: none; z-index: 0; }
+.sahne .amblem, .sahne h1, .sahne .alt, .sahne .slogan, .sahne .sosyal { position: relative; z-index: 1; }
+.canavar::before { content: ""; position: absolute; inset: 4% 4% 2% 4%; z-index: -1; border-radius: 50%;
   background: radial-gradient(closest-side, rgba(11, 8, 18, 0.95), rgba(11, 8, 18, 0.6) 70%, rgba(11, 8, 18, 0)); }
 .canavar.parla { filter: brightness(1.22) saturate(1.15); }
 .oyun { position: relative; }
@@ -174,11 +175,12 @@ html:not([lang="en"]) [data-dil="en"], html:not([lang="tr"]) [data-dil="tr"] { d
   .ejder { width: 220px; height: 220px; right: auto; left: 100%; bottom: auto; top: 50%; margin: -110px 0 0 18px; }
 }
 @media (max-width: 820px) {
-  .canavar { width: 118px; height: 133px; right: 8px; top: 18px; }
+  .canavar { width: 150px; height: 253px; right: 0; top: 14px; }
   .tb-sahne { padding-top: 120px; }
   .tilki { width: 140px; height: 140px; margin-bottom: -22px; }
   .ejder { width: 128px; height: 128px; margin-bottom: -18px; }
 }
 @media (max-width: 420px) {
-  .canavar { width: 84px; height: 95px; right: 6px; top: 14px; }
+  .canavar { width: 108px; height: 182px; right: -4px; top: 22px; }
+  .sahne .kahraman .amblem { width: 160px; height: 160px; }
 }
