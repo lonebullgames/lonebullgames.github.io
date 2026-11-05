@@ -496,3 +496,27 @@
   }
   requestAnimationFrame(dongu);
 })();
+
+// ---------------- dumanlı bayraklar: birkaç saniyede bir ülke değişir ----------------
+(function () {
+  var pano = document.getElementById("bayrakPano");
+  if (!pano) return;
+  var L = [["tr", "Türkiye", "Türkiye"], ["br", "Brazil", "Brezilya"], ["de", "Germany", "Almanya"], ["us", "USA", "ABD"],
+    ["fr", "France", "Fransa"], ["id", "Indonesia", "Endonezya"], ["es", "Spain", "İspanya"], ["it", "Italy", "İtalya"], ["ru", "Russia", "Rusya"]];
+  var v = pano.querySelectorAll("video"), ad = pano.querySelector(".bayrak-ad"), sira = 0, aktif = 0;
+  function yukle(el, k) { el.poster = "bayrak/bayrak_" + L[k][0] + ".jpg"; el.src = "bayrak/bayrak_" + L[k][0] + ".mp4"; }
+  function adYaz(k) { ad.innerHTML = '<span data-dil="en">' + L[k][1] + '</span><span data-dil="tr">' + L[k][2] + "</span>"; }
+  function oynat(el) { try { var p = el.play(); if (p && p.catch) p.catch(function () {}); } catch (e) {} }
+  yukle(v[0], 0); adYaz(0);
+  if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  oynat(v[0]);
+  setInterval(function () {
+    var yeni = (sira + 1) % L.length, eski = v[aktif], gelen = v[1 - aktif];
+    yukle(gelen, yeni);
+    gelen.currentTime = 0;
+    oynat(gelen);
+    gelen.classList.add("gor"); eski.classList.remove("gor");
+    setTimeout(function () { eski.pause(); }, 950);
+    aktif = 1 - aktif; sira = yeni; adYaz(yeni);
+  }, 5000);
+})();
