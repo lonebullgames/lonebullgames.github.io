@@ -1,3 +1,10 @@
+/* yazı tipleri sitenin kendi içinde (dışarıdan hiçbir şey yüklenmez) - SIL OFL 1.1, fonts/OFL.txt */
+@font-face { font-family: "Inter"; font-weight: 400; font-display: swap; src: url("fonts/inter-400.woff") format("woff"); }
+@font-face { font-family: "Inter"; font-weight: 600; font-display: swap; src: url("fonts/inter-600.woff") format("woff"); }
+@font-face { font-family: "Inter"; font-weight: 800; font-display: swap; src: url("fonts/inter-800.woff") format("woff"); }
+@font-face { font-family: "Poppins"; font-weight: 500; font-display: swap; src: url("fonts/poppins-500.woff") format("woff"); }
+@font-face { font-family: "Poppins"; font-weight: 700 800; font-display: swap; src: url("fonts/poppins-700.woff") format("woff"); }
+
 :root {
   --bg: #0b0812;
   --bg2: #140e1f;
