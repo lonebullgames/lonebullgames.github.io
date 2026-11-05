@@ -62,8 +62,10 @@
   var damlalar = [], bloklar = [], simsekler = [], parlama = 0, sonrakiSimsek = 1.2, sonrakiBlok = 0.2;
   var mermiler = [], parcalar = [], kovanlar = [], dumanlar = [], kivilcimlar = [], flasler = [], alevler = [], kuller = [];
   var RENKLER = ["#3fd8ff", "#ffd23f", "#b46bff", "#45e07a", "#ff5a6e", "#4f8bff", "#ff9a3c"];
-  var SEKILLER = [[[0,0],[1,0],[2,0],[3,0]], [[0,0],[1,0],[0,1],[1,1]], [[0,0],[1,0],[2,0],[1,1]],
-    [[1,0],[2,0],[0,1],[1,1]], [[0,0],[1,0],[1,1],[2,1]], [[0,0],[0,1],[1,1],[2,1]], [[2,0],[0,1],[1,1],[2,1]]];
+  // ThunderBurst'ün kendine özgü parçaları: 2'li, 3'lü çubuk, 5'li çubuk, 2x3 blok, 3'lü köşe (klasik 4'lü setten farklı)
+  var SEKILLER = [[[0,0],[1,0]], [[0,0],[0,1]], [[0,0],[1,0],[2,0]], [[0,0],[0,1],[0,2]],
+    [[0,0],[1,0],[2,0],[3,0],[4,0]], [[0,0],[1,0],[0,1],[1,1],[0,2],[1,2]], [[0,0],[1,0],[2,0],[0,1],[1,1],[2,1]],
+    [[0,0],[0,1],[1,1]], [[1,0],[0,1],[1,1]]];
   var hucreResmi = {};
 
   function hucre(renk, b) {
